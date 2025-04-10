@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Search Results</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Search Results</h1>
+        <p>Displaying results for: <strong><span id="search-query"></span></strong></p>
+        <!-- Add logic to display search results here -->
+    </div>
+
+    <script>
+        // Display the search query from the URL
+        const params = new URLSearchParams(window.location.search);
+        const keyword = params.get('keyword');
+        document.getElementById('search-query').textContent = keyword || 'No keyword provided';
+    </script>
+</body>
+</html>
